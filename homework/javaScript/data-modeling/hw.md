@@ -59,8 +59,17 @@ This app will be an app for tracking and managing tasks. Not only will it keep
 track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
+ //
 
-> Answer here
+var projects = {
+  type:  // this can be used for classifying and organization
+  completeStatus: // this will show the % of how much of the project is completed
+}
+
+var tasks = {
+  duration: // lists the time it will take to complete each task
+  completeStatus: // this will display whether or not the tasks have been completed "True" / "False"
+}
 
 ### 2. Photo Sharing App
 
