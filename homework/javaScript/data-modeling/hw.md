@@ -62,20 +62,51 @@ keep them organized.
  //
 
 var projects = {
-  type:  // this can be used for classifying and organization
-  completeStatus: // this will show the % of how much of the project is completed
+  name: "projectsName", // this will label the project name
+  type:  "work", // this can be used for classifying and organization
+  completeStatus: "False" // this will show the % of how much of the project is completed
 }
 
 var tasks = {
-  duration: // lists the time it will take to complete each task
-  completeStatus: // this will display whether or not the tasks have been completed "True" / "False"
+  name: 'taskName';, // identifies the task name
+  duration: "1.5 Hours", // lists the time it will take to complete each task
+  completeStatus: "Complete" // this will display whether or not the tasks have been completed "True" / "False"
 }
+
+```javaScript
+
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+There should be an input for the user to select the image he/she would like to upload. A description of the image. A classification for each image. And there should be a profile page with all photos listed that a user has uploaded.
+
+``profile
+  - displays all images
+  - give user's name
+
+``image upload
+  - prompt for uploading
+  - image description
+  - image class
+
+
+```javaScript
+let profile = {
+  name: prompt("User enter desired username"),
+  images: [image1, image2, image3],
+}
+
+let image = {
+  img: prompt("Prompt user for img src URL"),
+  imgDesc: "Description of image",
+  imgClass: "#vacation" // will group user's photos in an album collection
+}
+
+let albums = {
+  albumsClass = "#vacation" // will show photo's grouped under the same classification
+}
 
 ### 3. Home Automation Manager
 
@@ -84,7 +115,27 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+The app will need to have selectors for temperature and lights. Within temperature the user should be able to adjust the temperature.  Under lights there should be a switch for turning on and off lights.
+
+```Home
+  - adjust temperature
+  - pick a room to adjust lights
+
+```Lights
+  - select light
+  - toggle light
+  - adjust brightness
+
+  ```javaScript
+let home = {
+    temp: "73 degrees!",
+    roomSelector: "Living Room"
+  }
+let light = {
+    lightSelector: "Bulb 1",
+    lightLit: False,
+    bulbBrightness: "100%"
+} 
 
 ### 4. Sneaker Store
 
@@ -92,7 +143,42 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+There will need to be three variables, product, cart and savedCart. The product will give a breakdown of the product itself, the cart will display all items in the cart and also save the cart data for future orders.
+
+```Product
+  - image
+  - description
+  - price
+  - add to cart
+
+cart
+  - lists each product added to cart
+  - price
+  - quantity
+
+prevOrder
+  - item shipped (T/F)
+  - estimated arrival time
+
+```javaScript
+let product = {
+  image: "productSrcImgURL",
+  description: "This product is absolutely amazing! You need this product!",
+  price: "$5Mill",
+  button: "Add to cart"
+}
+
+let cart = {
+  itemsInCart: "product",
+  total: "$5Mil",
+  qnty: 1,
+}
+
+let prevOrder = {
+  shipStatus: True, //meaning shipped
+  eta: "Your package will arrive on December 3rd, 2021.",
+}
+
 
 ## Representing Abstractions in Code
 
