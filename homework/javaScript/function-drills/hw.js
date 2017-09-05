@@ -27,7 +27,7 @@ var sumOfNums = function(numsArray){
 var numsGreaterThanTen = function(numsArray){
   let results = [];
   for (let i = 0; i < numsArray.length; i++) {
-    if numsArray[i] > 10) {
+    if (numsArray[i] > 10) {
       alert(numsArray[i]);
     }
   }
@@ -39,7 +39,6 @@ var numsGreaterThanTen = function(numsArray){
 //         `false` otherwise
 // Edge Case: If the input array is empty, the function should return `true`.
 var allGreaterThanTen = function(numsArray){
-  (numsArray) {
     for (let i = 0; i < numsArray.length; i++) {
       if(!(numsArray[i] > 10)) {
         return false;
@@ -52,7 +51,6 @@ var allGreaterThanTen = function(numsArray){
 // Input: an array of words
 // Output: an array of all words from the first array with five or more letters
 var wordsWithAtLeastFiveLetters = function(words){
-  function(words) {
     let results = [];
     for (let i = 0; i < words.length; i++)
       {
