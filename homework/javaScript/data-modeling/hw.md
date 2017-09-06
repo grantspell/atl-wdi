@@ -234,7 +234,7 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+An advantage of this example would be each station name is listed and can be found by looking for its name. A disadvantage would be that the passenger's stop information is not being recorder, which is one of the main purposes of the app.
 
 ### 6. Doctor Appointment App
 
@@ -337,7 +337,7 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+> The first option would seem to be a good option for the doctor to use because it looks like it would break down his day with all of his appointments, while its disadvantage would be that it doesn't do the same for the patient. The second option seems to make more sense for a patient application because it lists the patient info, doctor info, and then all the appointment information. But with the given structure, it seems like all patients would have access to all appointments.
 
 ## Tying It Together
 
@@ -348,13 +348,31 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  > Player
+    - name
+    - character
+  > Game
+    - Player 1
+    - Play 2
+  > Action
+    - switch to show who's turn it is
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
-
+  ```js
+  let player = {
+    name: "Name Here",
+    character: "Player X"
+  }
+let game = {
+  player1: "Your turn",
+  player2: "Wait your turn."
+}
+let action = {
+  turn: "player1",
+}
+```
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+  > I chose these entities becaue there needs to be a system for keeping track of the players and who's turn it is. Also there needs to be a prompt for letting the player know when it is his/her turn. I know there is a better way to code the javaScript for player's turn, but that is necessary to keep a point system.
