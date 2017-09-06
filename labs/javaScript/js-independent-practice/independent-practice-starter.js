@@ -2,7 +2,18 @@
 // an array of strings. The function should return an array of numbers where each
 // number is the length of the corresponding string.
 
-// your code here
+var test = ['q', 'aa', 'ttt']
+
+function lengths(words)
+    var newTest = []
+    for (let i = 0; i < words.length; i++) {
+        newTest.push(words[i].length)
+    }
+    return newTest;
+}
+
+length(words);
+
 
 // 2. Write a Javascript function called `transmogrifier`
 // This function should accept three arguments, which you can assume will be numbers.
