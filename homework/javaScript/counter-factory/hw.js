@@ -49,7 +49,12 @@ const CounterCollection = {
 const Presenter = {
   insertCounterComponent: function(newCountId){
     console.log(`insert counter component #${newCountId}`);
-    // Your Code Here
+    let newCounter = document.createElement('div');
+    let newCounter = document.innerHTML = 
+    `<h3>Count: <span>0</span></h3> <button class='increment'> +1 </button> <button class='delete'> Delete </button>`
+    newCounter.className = ' counter';
+    newCounter.dataset.countId = newCountId;
+    newCounter.getClassByName('increment')[0]
   },
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
