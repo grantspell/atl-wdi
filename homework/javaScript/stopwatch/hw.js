@@ -116,3 +116,6 @@ window.onload = function(){
   document.getElementById('lap').onclick = AppController.handleClickLap;
   document.getElementById('stop').onclick = AppController.handleClickStopReset;
 };
+
+// Had to reference the solutions page quite a bit for this homework assignment. Most of the code clicked with me once I
+// saw its placement and how it was implemented.
