@@ -9,13 +9,6 @@ const hbs = require('hbs');
 app.set("view engine", "hbs");
 app.set('views', './views');
 
-//tells the server to listen for requests on port 3000
-app.listen(PORT, function() {
-    console.log("==========================")
-    console.log('LISTENING ON PORT ' + PORT);
-    console.log("==========================")
-});
-
 app.get("/", (req, res) => {
     const message = "Welcome to Pizza Express!"
 
@@ -23,7 +16,14 @@ app.get("/", (req, res) => {
 })
 
 app.get("/topping/:type", (req, res, next) => {
-    let type = (req.query.param);
+    let type = (req.query.params);
 
     res.send( type + " pizza! Good choice.")
 })
+
+//tells the server to listen for requests on port 3000
+app.listen(PORT, function() {
+    console.log("==========================")
+    console.log('LISTENING ON PORT ' + PORT);
+    console.log("==========================")
+});
