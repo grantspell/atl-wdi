@@ -22,8 +22,8 @@ app.get("/", (req, res) => {
     res.send( message )
 })
 
-app.get("/topping/:type", function(req, res, next) {
-    let type = 
+app.get("/topping/:type", (req, res, next) => {
+    let type = (req.query.param);
 
-    res.send()
+    res.send( type + " pizza! Good choice.")
 })
