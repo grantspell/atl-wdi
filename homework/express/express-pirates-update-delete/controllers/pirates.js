@@ -37,10 +37,18 @@ router.get('/:id', function(req, res){
 //==============================
 // CREATE
 //==============================
+router.get('/new', (req, res) => {
+	res.render('/pirates/new');
+})
 
 //==============================
 // UPDATE
 //==============================
+router.get('/:id/edit', (req, res) => {
+	res.render('todos/edit', {
+		pirates
+	})
+})
 
 //==============================
 // DESTROY
