@@ -7,7 +7,7 @@ const kitchen = require('./kitchen');
 // Call this method and console.log the data that comes back when the Promise is resolved.
 
 //CODE FOR QUESTION 1 HERE
-
+kitchen.readMenu().then(function(res) {console.log(res);});
 
 // Order Some Food
 /* *************************************************************** */
@@ -16,14 +16,14 @@ const kitchen = require('./kitchen');
 //  Console.log the data that comes back about this burger.
 
 // CODE FOR QUESTION 2 HERE
-
+kitchen.order("HELL'S FURY").then(function(res) {console.log(res);});
 
 // 3. Try and use the same method to order a `quesadilla`.  
 //  Since Promise Burger only serves burgers, this will throw an error.  
 //  Make sure that your Promise can be dealt with when it is rejected.
 
 // CODE FOR QUESTION 3 HERE
-
+kitchen.order("quesadilla").then(function(res) {console.log(res);}).catch(function(rej) {console.log(rej);});
 
 // Add A Burger To The Menu
 /* *************************************************************** */
@@ -41,12 +41,14 @@ const newBurger = {
 }
 
 // CODE FOR QUESTION 4 HERE
+kitchen.addToMenu(newBurger).then(function(res) {console.log(res);}).catch(function(rej) {console.log(rej);});
 
 // 5. Validate that the new item has been added to the menu by calling `readMenu` again.  
 // We only want to call `readMenu` after we get a response that is successful. 
 // Remember that we can chain promises together the same way that we can chain jQuery methods.
 
 // REFACTOR QUESTION 4 TO ACCOUNT FOR THIS REQUIREMENT
+kitchen.addToMenu(newBurger).then(function(res) {console.log(res);}).then(function(res) {console.log(kitchen.readMenu());}).catch(function(rej) {console.log(rej);});
 
 // Stretch Goals
 /* *************************************************************** */
