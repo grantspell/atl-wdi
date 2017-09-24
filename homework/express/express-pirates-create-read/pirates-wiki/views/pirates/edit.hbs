@@ -1,0 +1,26 @@
+<h1>Edit {{pirates.name}}</h1>
+
+<div class="row">
+    <form action="/pirates/{{pirates.id}}?_method=PUT" methods="POST" class="col-md-6 col-md-offset-3"> <!--Edit whatever pirate we choose by getting the ID of whatever chosen pirate-->
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input type="text" name="name" class="form-control" value="{{pirates.name}}"> 
+        </div> <!--This div is the edit name field-->
+        <div class="form-group">
+            <label for="name">Birthplace: </label>
+            <input type="text" name="birthplace" class="form-control" value="{{pirates.birthplace}}"> 
+        </div> <!--This div is the edit birthplace field-->
+        <div class="form-group">
+            <label for="name">Year of Death: </label>
+            <input type="text" name="death_year" class="form-control" value="{{pirates.death_year}}"> 
+        </div> <!--This div is the edit year of death field-->
+        <div class="form-group">
+            <label for="name">Base: </label>
+            <input type="text" name="base" class="form-control" value="{{pirates.base}}"> 
+        </div> <!--This div is the edit base field-->
+        <div class="form-group">
+            <label for="name">Nickname: </label>
+            <input type="text" name="nickname" class="form-control" value="{{pirates.nickname}}"> 
+        </div> <!--This div is the edit nickname field-->
+    </form>
+</div>

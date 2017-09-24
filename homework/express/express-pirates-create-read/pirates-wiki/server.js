@@ -9,13 +9,18 @@ const bodyParser = require('body-parser');
 /*APP SETTINGS*/
 const app = express();
 const PORT = process.env.PORT || 3000;
-const piratesController = ("./controllers/pirates")
+const piratesController = require("./controllers/pirates")
+
+/* LOG */
+app.use( logger('dev'));
+
+app.use(bodyParser.urlencoded({extended: true}));
 
 /* VIEWS */
 app.set('view engine', 'hbs');
 
 /* CONTROLLERS */
-app.use("/pirates", piratesController);
+app.use('/pirates', piratesController);
 
 /* HOME */
 app.get('/', (req, res) => {

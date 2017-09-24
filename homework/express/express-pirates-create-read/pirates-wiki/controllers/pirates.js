@@ -7,24 +7,25 @@ const pirates = require('../models/pirates.js');
 
 /* INDEX */
 router.get('/', (req, res) => {
-    console.log(data);
+    console.log(pirates);
     res.render('pirates/index', {
-    pirates: piratesList
+    pirates: pirates.piratesList
     });
 });
 
 /* NEW */
 router.get('/new', (req, res) => {
-    router.post('pirates/new');
-})
+    res.render('pirates/new');
+});
+
 /* SHOW */
 router.get('/:id', (req, res) => {
     const id = parseInt(req.params.id);
-    const pirate = data.piratesList[id];
+    const pirate = pirates.piratesList[id];
     console.log(pirate);
-    if(!pirate){
+    if (!pirate){
         res.render('pirates/show', {
-            error: "No pirate with this ID #"
+            error: "Arrrgghh! No pirate with this ID"
         })
     } else {
         res.render('pirates/show', {pirate})
@@ -34,16 +35,23 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     console.log(req.body);
     const newPirate = req.body;
-    data.piratesList.push(newPirate);
+    pirates.piratesList.push(newPirate);
     res.redirect('/pirates');
 });
 
-router.post('/', (req, res) => {
-    console.log(req.body);
-    const newPirate = req.body;
-    data.piratesList.push(newPirate);
-    res.redirect('/index');
-})
+/* EDIT */
+router.get('/:id/edit', (req, res) => {
+    res.render('pirates/edit', {
+        pirate: {
+            id: req.params.id,
+            name: pirates.piratesList[req.params.id].name,
+            birthplace: pirates.piratesList[req.params.id].birthplace,
+            death_year: pirates.piratesList[req.params.id].death_year,
+            base: pirates.piratesList[req.params.id].base,
+            nickname: pirates.piratesList[req.params.id].nickname
+        }
+    });
+});
 
 /* EXPORTS */
 module.exports = router;

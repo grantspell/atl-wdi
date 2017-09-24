@@ -1,4 +1,13 @@
 <h1> THE CREWMATES </h1>
 <ul>
     {{#each pirates}}
+        <li>Name: <a href="/pirates/{{@index}}/show">{{name}}</a></li>
+        <li>Birthplace: {{birthplace}}</li>
+        <li>Year of Death: {{death_year}}</li>
+        <li>Base: {{base}}</li>
+        <li>Nickname: {{nickname}}</li>
+        <hr>
+    {{/each}}
 </ul>
+
+<a href="/pirates/new">Create Your Own Pirate!</a>

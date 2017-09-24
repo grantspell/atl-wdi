@@ -1,1 +1,25 @@
-<h1>{{ new }}</h1>
+<h1>Create Your Own Pirate!</h1>
+
+<form method="POST" action="/pirates">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="birthplace">Birthplace: </label>
+        <input type="text" name="birthplace">
+    </div>
+    <div>
+        <label for="death_year">Year of Death: </label>
+        <input type="text" name="death_year">
+    </div>
+    <div>
+        <label for="base">Base: </label>
+        <input type="text" name="base">
+    </div>
+    <div>
+        <label for="nickname">Nickname: </label>
+        <input type="text" name="nickname">
+    </div>
+    <button>Create Crewmate!</button>
+</form>
