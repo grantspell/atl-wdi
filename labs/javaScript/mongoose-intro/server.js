@@ -1,6 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const hbs = require('hbs')
+const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 
 const app = express()
 
@@ -9,6 +11,14 @@ mongoose.connect('mongodb://localhost/students');
 app.set('view engine', 'hbs')
 
 const db = mongoose.connection
+
+/* OVERRIDE */
+app.use(methodOverride('_method'))
+
+/* BODY PARSER */
+//app.use( logger('dev'));
+
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Will log an error if db can't connect to MongoDB
 db.on('error', function (err) {

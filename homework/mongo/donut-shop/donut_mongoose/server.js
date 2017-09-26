@@ -2,14 +2,17 @@
 // REQUIREMENTS
 //======================
 // require express, mongoose, body-parser, method-override
-var express = require("express");
-var app = express();
-var mongoose = require("mongoose");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var hbs = require("hbs");
+var express = require('express');
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var hbs = require('hbs');
 var logger = require('morgan');
 
+var app = express();
+
+//CONNECT MONGOOSE TO "donut_store"
+mongoose.connect('mongodb://localhost/donut_store');
 
 //======================
 // MIDDLEWARE
@@ -19,8 +22,12 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
 
-app.set("view engine", "hbs");
+/* VIEWS / HBS */
+
+app.set('view engine', 'hbs');
 app.set('views', './views');
+
+/* THIS HAS SOMETHING TO DO WITH CSS */
 
 app.use(express.static(__dirname + 'public'));
 app.use( logger('dev'));
@@ -39,7 +46,20 @@ app.use('/', donutsController);
 //======================
 // LISTENERS
 //======================
-//CONNECT MONGOOSE TO "donut_store"
 
+const db = mongoose.connection;
+
+db.on('error', function (err) {
+    console.log(err);
+});
+
+db.once('open', function () {
+    console.log("database has been connected!");
+});
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`SERVER ${port} IS HOT`);
+});

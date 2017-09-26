@@ -4,6 +4,12 @@ const Schema = require("../db/schema.js");
 
 const StudentModel = Schema.StudentModel;
 
+/* HOME ROUTE */
+
+router.get('/', (req, res) => {
+    res.redirect('/students')
+})
+
 /* INDEX ROUTE */
 
 router.get('/', (request, response) => {
@@ -39,23 +45,61 @@ router.get('/:id', (request, response) => {
 
 })
 
-/* DELETE ROUTE */
-
-router.get('/:id/delete', (request, response) => {
-
-    const studentId = request.params.id
-
-    StudentModel.findOneAndRemove(studentId)
-        .then((student) => {
-            response.send('You deleted it!')
-        })
-
-})
-
 /* POST ROUTE */
 
 router.post('/', (req, res) => {
     
+    const newStudent = req.body
+
+    StudentModel.create( newStudent )
+        .then(() => {
+            res.redirect('/students')
+        })
+})
+
+/* EDIT ROUTE */
+
+router.get('/:id/edit', (req, res) => {
+    
+    const studentId = req.params.id
+
+    StudentModel.findById(studentId)
+        .then((student) => {
+            res.render('student/edit', {
+                student: student
+            })
+        })
+
+})
+
+/* UPDATE ROUTE */
+
+router.put('/:id', (req,res) => {
+
+    const studentIdToUpdate = req.params.id
+    const updatedStudent = req.body
+
+    StudentModel.findByIdAndUpdate({ id: studentIdToUpdate }, updatedStudent, { new: true })
+        .then(() => {
+            response.redirect(`/students/${studentIdToUpdate}`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
+})
+
+/* DELETE ROUTE */
+
+router.get('/:id/delete', (req, res) => {
+
+    const studentId = req.params.id
+
+    StudentModel.findOneAndRemove(studentId)
+        .then((student) => {
+            res.send('You deleted it!')
+        })
+
 })
 
 module.exports = router
