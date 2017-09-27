@@ -1,7 +1,6 @@
 
 
-
-// THIS IS A ROUGH DRAFT !!
+// THIS IS A ROUGH DRAFT, COPY #1
 
 //======================
 // REQUIREMENTS
@@ -15,7 +14,6 @@ var methodOverride = require("method-override");
 var hbs = require("hbs");
 var logger = require('morgan');
 
-mongoose.connect('mongodb://localhost/donut_store');
 
 //======================
 // MIDDLEWARE
@@ -46,10 +44,6 @@ app.use('/', donutsController);
 // LISTENERS
 //======================
 //CONNECT MONGOOSE TO "donut_store"
-//const db = mongoose.connection;
+
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`express is listening on ${PORT}`)
-})
