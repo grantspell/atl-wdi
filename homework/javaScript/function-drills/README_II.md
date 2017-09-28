@@ -19,7 +19,7 @@ The issue should include:
 -->
 -   The screenshot you took.
 
-    ![alt text](/function-drills/screen/shot/screenShot.png)
+    ![image](screen-shot/screenShot.png)
 <!--
 -   A 'comfort' score on how you feel about the material, from 1 (very
     uncomfortable) to 5 (very comfortable) -->
