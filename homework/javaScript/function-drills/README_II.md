@@ -1,6 +1,6 @@
-<!-- ## Submitting Your Work
-
-When you're ready to submit your work,
+## Submitting Your Work
+ORIGINAL README.md INSTRUCTIONS SAY...
+<!--When you're ready to submit your work,
 
 1.  Run the command `npm test` and take a screenshot of the output in your
     terminal.
