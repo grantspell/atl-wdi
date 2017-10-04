@@ -1,6 +1,6 @@
-## Submitting Your Work
-
-When you're ready to submit your work,
+<!-- ## Submitting Your Work
+ORIGINAL README.md INSTRUCTIONS SAY...
+<!--When you're ready to submit your work,
 
 1.  Run the command `npm test` and take a screenshot of the output in your
     terminal.
@@ -22,4 +22,6 @@ The issue should include:
     ![image](screen-shot/screenShot.png)
 
 -   A 'comfort' score on how you feel about the material, from 1 (very
-    uncomfortable) to 5 (very comfortable) 
+    uncomfortable) to 5 (very comfortable)
+
+comfort score: 4 -->
