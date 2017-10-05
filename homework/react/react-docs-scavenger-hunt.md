@@ -67,9 +67,9 @@
 
 10. Where would I go to check out React's built-in testing tools?
 
-    Answer: 
+    Answer: To read about React's built-in testing tools follow the source page link bellow.
 
-    Source Page Link: []()
+    Source Page Link: [React > Docs > Test-Utils](https://reactjs.org/docs/test-utils.html)
 
 ### Turning in:
 
