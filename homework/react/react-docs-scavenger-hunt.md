@@ -20,9 +20,9 @@
 
 3. Does React re-render the entire component when one part of it changes?
 
-    Answer:
+    Answer: No, React does not re-render the entire component when one part of it changes.
 
-    Source Page Link: []()
+    Source Page Link: [React > Docs > Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
 
 4. Should we ever change `props` (or parameters) inside of a component? 
 
