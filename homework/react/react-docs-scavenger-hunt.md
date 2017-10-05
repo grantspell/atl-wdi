@@ -46,9 +46,9 @@
 
 7. Do we have to use ES6 syntax with React?
 
-    Answer: 
+    Answer: No, you do not have to use ES6. "Since the API of ES6 classes is similar to 'createReactClass()' with a few exceptions," you can use the 'create-react-class' module instead.
 
-    Source Page Link: []()
+    Source Page Link: [React > Docs > React-without-ES6](https://reactjs.org/docs/react-without-es6.html)
 
 
 8. Where can I go to check out React's built-in Accessibility features?
