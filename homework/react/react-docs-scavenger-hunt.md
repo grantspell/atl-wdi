@@ -12,11 +12,11 @@
 
 2. We are using JSX to write HTML inside of our React. Are we required to use JSX with React? Are there any alternatives?
 
-    Answer: When writing HTML inside of a React app you are advised to use JSX. An alternative would be to use the 'React.createElement()' function, but this is the less DRY and less efficient way to write HTML in React.
+    Answer: When writing HTML inside of a React app you are advised to use JSX, but NOT required to. An alternative would be to use the 'React.createElement' function with plain javaScript (which will be compiled by said function).
 
     Source Page Link: [React > Docs > Introducing-JSX](https://reactjs.org/docs/introducing-jsx.html)
 
-    Source Page II Link: [React > Docs > JSX-in-Depth](https://reactjs.org/docs/jsx-in-depth.html)
+    Source Page II Link: [React > Docs > React-without-JSX](https://reactjs.org/docs/react-without-jsx.html)
 
 3. Does React re-render the entire component when one part of it changes?
 
@@ -26,17 +26,50 @@
 
 4. Should we ever change `props` (or parameters) inside of a component? 
 
-5. Are all components classes? 
+    Answer: No, we should never change 'props' inside of a component. This is the single strict rule of React: "All React components must act like pure functions with respect to their props."
+
+    Source Page Link: [React > Docs > Components-and-Props](https://reactjs.org/docs/components-and-props.html)
+
+5. Are all components classes?
+
+    Answer: No, there are Functional and Class Components.
+
+    Source Page Link: [React > Docs > Compononents-and-Props](https://reactjs.org/docs/components-and-props.html)
+
 
 6. List five "Synthetic Events" provided by React:
 
+    Answer: Five different types of 'Synthetic Events' provided by React are: Clipboard Events, Composition Events, Keyboard Events, Focus Events and Form Events.
+
+    Source Page Link: [React > Docs> Events](https://reactjs.org/docs/events.html)
+
+
 7. Do we have to use ES6 syntax with React?
+
+    Answer: 
+
+    Source Page Link: []()
+
 
 8. Where can I go to check out React's built-in Accessibility features?
 
+    Answer: 
+
+    Source Page Link: []()
+
+
 9. List five React Component Lifecycle Methods:
 
+    Answer: 
+
+    Source Page Link: []()
+
+
 10. Where would I go to check out React's built-in testing tools?
+
+    Answer: 
+
+    Source Page Link: []()
 
 ### Turning in:
 
