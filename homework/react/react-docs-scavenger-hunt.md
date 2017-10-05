@@ -60,9 +60,9 @@
 
 9. List five React Component Lifecycle Methods:
 
-    Answer: 
+    Answer: 'componentDidMount()', 'componentWillUnmount()', 'componentWillReceiveProps()', 'componentDidUpdate()', 'componentWillUnmout()'.
 
-    Source Page Link: []()
+    Source Page Link: [React > Docs > React-Component](https://reactjs.org/docs/react-component.html)
 
 
 10. Where would I go to check out React's built-in testing tools?
