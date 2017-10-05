@@ -12,13 +12,17 @@
 
 2. We are using JSX to write HTML inside of our React. Are we required to use JSX with React? Are there any alternatives?
 
-    Answer: When using React you 
+    Answer: When writing HTML inside of a React app you are advised to use JSX. An alternative would be to use the 'React.createElement()' function, but this is the less DRY and less efficient way to write HTML in React.
 
     Source Page Link: [React > Docs > Introducing-JSX](https://reactjs.org/docs/introducing-jsx.html)
 
-    Sour Page II Link: [React > Docs > JSX-in-Depth](https://reactjs.org/docs/jsx-in-depth.html)
+    Source Page II Link: [React > Docs > JSX-in-Depth](https://reactjs.org/docs/jsx-in-depth.html)
 
 3. Does React re-render the entire component when one part of it changes?
+
+    Answer:
+
+    Source Page Link: []()
 
 4. Should we ever change `props` (or parameters) inside of a component? 
 
