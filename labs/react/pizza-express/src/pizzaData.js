@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-
 export default [
   {
     name: "HONEY BBQ CHICKEN DELUXE",
