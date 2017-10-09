@@ -4,7 +4,7 @@ type: Lab
 creator:
     name: Jamie King
     city: ATL
-competencies: Front-end frameworks
+competencies: Front-End frameworks
 ---
 
 # JSX and React
