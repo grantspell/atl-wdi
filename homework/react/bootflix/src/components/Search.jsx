@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 
 // Update the forms to utilize methods being passed down from App.js
-const Search = (props) => {
+class Search extends Component {
 
   state = {
     clientTitle: '',
     clientID: ''
   }
 
+  handleSubmitTitle = (event) => {
+    event.preventDefault()
+    
+    const clientTitle = event.target.value
+
+    this.setState({
+      clientTitle: clientTitle
+    })
+
+  }
+
+  handleSubmitI = (event) => {
+    event.preventDefault()
+    
+  }
+  
 render() {
   return (
     <section id="movie-search">
@@ -32,4 +48,4 @@ render() {
 }
 };
 
-export default Search
+export default Search;
