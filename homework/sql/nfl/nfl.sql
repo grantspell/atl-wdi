@@ -225,3 +225,101 @@ nfl=# SELECT (name, position, salary) FROM players WHERE salary >  100000;
  ("Ryan Fitzpatrick",QB,2800000)
  ("Steve Johnson",WR,2500000)
  ...
+
+ ## 9 | THE PLAYER WITH THE HIGHEST SALARY IN THE NFL
+
+ nfl=# SELECT * FROM players ORDER BY salary DESC LIMIT 1;
+ id  |      name      | position |  salary  | team_id
+-----+----------------+----------+----------+---------
+ 589 | Peyton Manning | QB       | 18000000 |      13
+(1 row)
+
+## 10 | THE NAME AND POSITION OF THE FIRST 100 PLAYERS WITH THE LOWEST SALARIES
+
+nfl=# SELECT (name, position) FROM players ORDER BY salary ASC LIMIT 100;
+              row
+-------------------------------
+ ("Phillip Dillard","")
+ ("Eric Kettani",RB)
+ ("Austin Sylvester",RB)
+ ("Greg Orton",WR)
+ ("Jerrod Johnson",QB)
+ ("McLeod Bethel-Thompson",QB)
+ ("Jonathan Crompton",QB)
+ ("Travon Bellamy",CB)
+ ("Caleb King",RB)
+ ("Mike Mohamed",LB)
+ ("Kyle Nelson",LS)
+ ("John Malecki",G)
+ ("Nathan Bussey",LB)
+ ("Robert James",LB)
+ ("Markell Carter",DE)
+ ("Aaron Lavarias",DT)
+ ("Mark Dell",WR)
+ ("Ronald Johnson",WR)
+ ("Doug Worthington",DT)
+ ("Derrick Jones",WR)
+ ("Sealver Siliga",DT)
+ ("Chase Beeler",C)
+ ("Kenny Wiggins",T)
+ ("Konrad Reuland",TE)
+ ("Michael Wilhoite",LB)
+ ("Garrett Chisolm",G)
+:
+
+## 11 | THE AVERAGE SALARY FOR A DE IN THE NFL
+
+nfl=# SELECT AVG(salary) FROM players WHERE position = 'DE';
+         avg
+----------------------
+ 2161326.377049180328
+(1 row)
+
+## 12 | THE NAMES OF ALL THE PLAYERS ON THE BUFFALO BILLS
+
+nfl=# SELECT (name) FROM players WHERE team_id = 1;
+        name
+--------------------
+ Mario Williams
+ Drayton Florence
+ Shawne Merriman
+ Dwan Edwards
+ Chris Kelsay
+ Kyle Williams
+ Nick Barnett
+ Spencer Johnson
+ Ryan Fitzpatrick
+ Steve Johnson
+ Tyler Thigpen
+ Lee Evans (Buyout)
+ Brad Smith
+ Fred Jackson
+ Scott Chandler
+ George Wilson
+ Erik Pears
+ Leodis McKelvin
+ Brian Moorman
+ Terrence McGee
+ Marcell Dareus
+ Chad Rinehart
+ Kraig Urbik
+ Rian Lindell
+ Kirk Morrison
+ Corey McIntyre
+:
+
+## 13 | THE TOTAL SALARY OF ALL PLAYERS ON THE NEW YORK GIANTS
+
+nfl=# SELECT AVG(salary) FROM players WHERE team_id = 18;
+         avg
+----------------------
+ 1483589.320000000000
+(1 row)
+
+## 14 | THE PLAYER WITH THE LOWEST SALARY ON THE GREEN BAY PACKERS
+
+nfl=# SELECT * FROM players WHERE team_id = 23 ORDER BY salary ASC LIMIT 1;
+  id  |      name      | position | salary | team_id
+------+----------------+----------+--------+---------
+ 1108 | Shaky Smithson | WR       | 390000 |      23
+(1 row)
