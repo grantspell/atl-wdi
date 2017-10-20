@@ -24,6 +24,30 @@
 	
     const kenobis = ???
 	```
+<!-- # 1 | ANSWER -->
+        const people = [
+        {
+            firstName: 'Ben',
+            lastName: 'Kenobi'
+        },
+        {
+            firstName: 'Tim',
+            lastName: 'Cook'
+        },
+        {
+            firstName: 'Etta',
+            lastName: 'James'
+        },
+        {
+            firstName: 'Jill',
+            lastName: 'Kenobi'
+        }
+    ];
+	
+    const kenobis = people.filter(person => person.lastName === 'Kenobi');
+    
+    console.log(kenobis);
+<!-- / # 1 | ANSWER -->
 	
 2. Find 'Jill Kenobi' from our array of people:
 
@@ -174,3 +198,50 @@ an order's total, including tax (assume a tax rate of 7%) must be greater than $
     const ordersWithFreeShipping = ???
     ```
 
+<!-- # 6 | ANSWER -->
+    const orders = [
+        {
+            orderName: 'An Order',
+            items: [
+                {
+                    price: 12.10,
+                    quantity: 4
+                },
+                {
+                    price: 50.43,
+                    quantity: 1
+                }
+            ]
+        },
+        {
+            orderName: 'Another Order',
+            items: [
+                {
+                    price: 55.43,
+                    quantity: 1
+                },
+                {
+                    price: 1.45,
+                    quantity: 2
+                }
+            ]
+        },
+        {
+            orderName: 'A Third Order',
+            items: [
+                {
+                    price: 23.56,
+                    quantity: 3
+                }
+            ]
+        }
+    ];
+    
+    const ordersWithFreeShipping = orders.filter((order) => {
+      return order.items.reduce((acc, item) => {
+        return acc + ((item.price * item.quantity) * 1.07 )
+      }, 0) > 100
+    })
+
+    console.log(ordersWithFreeShipping);
+<!-- / # 6 | ANSWER -->
