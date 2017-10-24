@@ -27,19 +27,47 @@
 # print a_simple_variable
 # puts a_simple_variable.class
 
-# CHALLENGE 3 : INTEGERS
+# # CHALLENGE 3 : INTEGERS
+
+# ## 1
+
+# puts d = 5
+
+# ## 2
+
+# puts e = 8.88
+
+# ## 3
+
+# puts d = e
+
+# ## COMMIT
+
+# CHALLENGE 4 : STRINGS
 
 ## 1
 
-puts d = 5
+christine = "Hi, I'm Christine"
 
 ## 2
 
-puts e = 8.88
+likesTo = "long walks on the beach, kinda."
 
 ## 3
 
-puts d = e
+tims = " and I like "
+puts christine + tims + likesTo
+
+## 4
+
+g = "2"
+
+## 5
+
+gToNumber = 2
+
+## 6
+
+puts g + gToNumber.to_s
 
 ## COMMIT
-
