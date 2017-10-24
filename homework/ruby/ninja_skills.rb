@@ -1,4 +1,4 @@
-# # CHALLENGE 1: BOOLEANS
+# # CHALLENGE 1 : BOOLEANS
 
 # ## 1 | Create a variable `a` and set it equal to true
 
@@ -18,11 +18,28 @@
 
 # ## 5 | Commit -m "1. Boolean Skills"
 
-# Challenge 2: Nil
+# # CHALLENGE 2 : Nil
 
-a_simple_variable = nil
+# a_simple_variable = nil
 
-p a_simple_variable
-puts "#{ a_simple_variable } was here!"
-print a_simple_variable
-puts a_simple_variable.class
+# p a_simple_variable
+# puts "#{ a_simple_variable } was here!"
+# print a_simple_variable
+# puts a_simple_variable.class
+
+# CHALLENGE 3 : INTEGERS
+
+## 1
+
+puts d = 5
+
+## 2
+
+puts e = 8.88
+
+## 3
+
+puts d = e
+
+## COMMIT
+
