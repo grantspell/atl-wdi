@@ -100,22 +100,32 @@
 # myFirstArray.push(t)
 # puts myFirstArray << myFirstArray[3].class
 
-# CHALLENGE 7 : HASHES
+# # CHALLENGE 7 : HASHES
 
-puts myFavoriteAnimals = {
-    :Edgar => "Donkey",
-    :Gypsy => "Dog",
-    :Grant => "Feline",
-    :Jan => "Turtle",
-    :Pam => "Hedgehog",
-}
+# puts myFavoriteAnimals = {
+#     :Edgar => "Donkey",
+#     :Gypsy => "Dog",
+#     :Grant => "Feline",
+#     :Jan => "Turtle",
+#     :Pam => "Hedgehog",
+# }
 
-puts myFavoriteAnimals[:Edgar] = "Bear"
+# puts myFavoriteAnimals[:Edgar] = "Bear"
 
-puts favoriteMovie = { 
+# puts favoriteMovie = { 
   
- }
+#  }
 
-puts favoriteMovie = {
-    :movie => "The Parent Trap"
-}
+# puts favoriteMovie = {
+#     :movie => "The Parent Trap"
+# }
+
+# CHALLENGE 8 : RANGES
+
+firstRange = (1..10).to_a
+puts firstRange
+
+firstRange.first(10)
+
+# CHALLENGE 9 : SUM OF NATURAL NUMBERS
+
