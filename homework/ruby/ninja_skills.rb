@@ -43,31 +43,48 @@
 
 # ## COMMIT
 
-# CHALLENGE 4 : STRINGS
+# # CHALLENGE 4 : STRINGS
 
-## 1
+# ## 1
 
-christine = "Hi, I'm Christine"
+# christine = "Hi, I'm Christine"
 
-## 2
+# ## 2
 
-likesTo = "long walks on the beach, kinda."
+# likesTo = "long walks on the beach, kinda."
 
-## 3
+# ## 3
 
-tims = " and I like "
-puts christine + tims + likesTo
+# tims = " and I like "
+# puts christine + tims + likesTo
 
-## 4
+# ## 4
 
-g = "2"
+# g = "2"
 
-## 5
+# ## 5
 
-gToNumber = 2
+# gToNumber = 2
 
-## 6
+# ## 6
 
-puts g + gToNumber.to_s
+# puts g + gToNumber.to_s
 
-## COMMIT
+# ## COMMIT
+
+# CHALLENGE 5 : INPUT AND OUTPUT
+
+puts "Please enter a number.."
+input = gets.chomp
+num = input.to_i
+puts num * 2
+
+greeting = "Hello! I am "
+interests = " and I love "
+punctuation = "!"
+puts "What is your name?"
+user_name = gets.chomp
+puts "What do you like to do?"
+user_interests = gets.chomp
+puts greeting << user_name << interests << user_interests << punctuation
+    
