@@ -99,14 +99,23 @@ Please answer the following questions in the spaces provided.
 1.  How do you write an `if` statement in Ruby?
 
   ```ruby
-    # your answer here
+grant_age = 21
+your_age = 0
+
+if grant_age < your_age
+  puts "You are younger than grant!"
+end
+
   ```
 
 2.  Please write code that would take the string "007", reverse it,
     and return the integer `700`.
 
   ```ruby
-    # your answer here
+
+  value = "007"
+  new_value = value.reverse
+
   ```
 
 3.  Please write code that takes the array `[23,56,3,7]`, sorts it,
@@ -114,25 +123,40 @@ Please answer the following questions in the spaces provided.
     (i.e. modifying the original array, rather than returning a new array).
 
   ```ruby
-    # your answer here
+  
+  array = [23, 56, 3, 7]
+
+  array.sort!
+  array.reverse!
+
   ```
 
 3.  What does an exclamation point at the end of a method name usually signify?
 
   ```text
     Your answer here:
+
+  The `!` transforms the original data's value.
+
   ```
 
 4.  What does a question mark and the end of a method name usually signify?
 
   ```text
     Your answer here:
+
+  The `?` asks if whatever method in front of the `?` is applicable to the data before the method.s
+
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+
+  A method in Ruby is equivalent to a function in JavaScript. An example would be:
+
+    Array.new # THIS ALLOWS US TO CREATE A NEW ARRAY
+  
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.

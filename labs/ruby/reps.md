@@ -14,6 +14,16 @@ Write a method `lengths` that accepts a single parameter as an argument, namely 
 words = ["hello", "what", "is", "up", "dude"]
 lengths(words)  # => [5, 4, 2, 2, 4]
 ```
+
+### My Answer
+```ruby
+words = ["hello", "what", "is", "up", "dude"]
+index_array = []
+
+length = words.map{ |word| puts word.length }
+
+puts length(words)
+```
 ---
 
 ## For Real Now
@@ -65,6 +75,25 @@ hash_switcher([ {"hello" => "world"}, {"yo" => "lo"} ])
 # => [{"world" => "hello"}, {"lo" => "yo"}]
 ```
 
+### My Answer
+```ruby
+def hash_switcher input
+  if input.class == Hash
+  return input.invert
+elseif input.class == Array
+  new_arr = input.map do |item|
+    item.invert
+  end
+  return new_arr
+end
+end
+
+hash_switcher({"hello" => "world"})
+# => {"world" => "hello"}
+hash_switcher([ {"hello" => "world"}, {"yo" => "lo"} ])
+# => [{"world" => "hello"}, {"lo" => "yo"}]
+```
+
 ### Round 4
 
 HINT: look up arrays each_index method
@@ -85,6 +114,31 @@ export_hash(["happy", "sad"], ["joy"])
 # => "Your input is bad and you should feel bad"
 export_hash(["happy happy"], 5)
 # => nil
+```
+
+### My Answer:
+```ruby
+def export_hash(arr1, arr2)
+  if arr1.class != Array || arr2.class != Array
+    return nil
+  end
+  if arr1.length != arr2.length
+    return "Your input is bad, but you are okay"
+  end
+  h = {}
+  arr1.length.times do |index|
+    h[arr1[index]] = arr2[index]
+  end
+  h
+end
+
+export_hash(["happy", "sad"], ["joy", "sorrow"])
+# => {"happy" => "joy", "sad" => "sorrow"}
+export_hash(["happy", "sad"], ["joy"])
+# => "Your input is bad and you should feel bad"
+export_hash(["happy happy"], 5)
+# => nil
+
 ```
 
 ### Round 5
