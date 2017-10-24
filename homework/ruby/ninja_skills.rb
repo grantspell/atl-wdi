@@ -88,14 +88,34 @@
 # user_interests = gets.chomp
 # puts greeting << user_name << interests << user_interests << punctuation
 
-# CHALLENGE 6 : ARRAYS
+# # CHALLENGE 6 : ARRAYS
 
-myFirstArray = []
-myFirstArray = ["love", "champagne", "seacrest", "rocky", "balboa", 2, 5, 7, 9]
-puts myFirstArray[-1]
-puts myFirstArray[0]
-myFirstArray[1] = "Joe"
-myFirstArray[2] = 3
-t = true
-myFirstArray.push(t)
-puts myFirstArray << myFirstArray[3].class
+# myFirstArray = []
+# myFirstArray = ["love", "champagne", "seacrest", "rocky", "balboa", 2, 5, 7, 9]
+# puts myFirstArray[-1]
+# puts myFirstArray[0]
+# myFirstArray[1] = "Joe"
+# myFirstArray[2] = 3
+# t = true
+# myFirstArray.push(t)
+# puts myFirstArray << myFirstArray[3].class
+
+# CHALLENGE 7 : HASHES
+
+puts myFavoriteAnimals = {
+    :Edgar => "Donkey",
+    :Gypsy => "Dog",
+    :Grant => "Feline",
+    :Jan => "Turtle",
+    :Pam => "Hedgehog",
+}
+
+puts myFavoriteAnimals[:Edgar] = "Bear"
+
+puts favoriteMovie = { 
+  
+ }
+
+puts favoriteMovie = {
+    :movie => "The Parent Trap"
+}
