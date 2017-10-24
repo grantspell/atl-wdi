@@ -72,19 +72,30 @@
 
 # ## COMMIT
 
-# CHALLENGE 5 : INPUT AND OUTPUT
+# # CHALLENGE 5 : INPUT AND OUTPUT
 
-puts "Please enter a number.."
-input = gets.chomp
-num = input.to_i
-puts num * 2
+# puts "Please enter a number.."
+# input = gets.chomp
+# num = input.to_i
+# puts num * 2
 
-greeting = "Hello! I am "
-interests = " and I love "
-punctuation = "!"
-puts "What is your name?"
-user_name = gets.chomp
-puts "What do you like to do?"
-user_interests = gets.chomp
-puts greeting << user_name << interests << user_interests << punctuation
-    
+# greeting = "Hello! I am "
+# interests = " and I love "
+# punctuation = "!"
+# puts "What is your name?"
+# user_name = gets.chomp
+# puts "What do you like to do?"
+# user_interests = gets.chomp
+# puts greeting << user_name << interests << user_interests << punctuation
+
+# CHALLENGE 6 : ARRAYS
+
+myFirstArray = []
+myFirstArray = ["love", "champagne", "seacrest", "rocky", "balboa", 2, 5, 7, 9]
+puts myFirstArray[-1]
+puts myFirstArray[0]
+myFirstArray[1] = "Joe"
+myFirstArray[2] = 3
+t = true
+myFirstArray.push(t)
+puts myFirstArray << myFirstArray[3].class
