@@ -21,6 +21,12 @@ people = [
 
 upper_case_full_names = []
 
+    upper_case_full_names = people.map do |person|
+        full_name = "#{first_name} #{last_name}"
+        full_name.upcase
+    end
+
+puts upper_case_full_names
 
 #   2. Find the first order for each user
 
@@ -63,8 +69,13 @@ users = [
     )
 ]
 
-first_order_for_each_user = []
+first_order_for_each_user = customers.first do |customer|
+    credits = customer.credits.reduce(:+)
+    debits = customer.debits.reduce(:+)
+    credits - debits
+end
 
+puts first_order_for_each_user
 
 #   3. Find the average amount spent on coffee, per transaction, for each person
 
