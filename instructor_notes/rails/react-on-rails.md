@@ -84,7 +84,7 @@ This sets up our Ruby on Rails API and generates our file structure.  At this po
 
 6. After installing `foreman`, create a file titled `Procfile.dev` and paste the following code.
 ```
-web: cd client && PORT=3000 npm start
+web: sh -c 'cd client && PORT=3000 npm start'
 api: rails s -p 3001
 ```
 
@@ -144,7 +144,7 @@ Rails.application.routes.draw do
 end
 ```
 
-Let's see all of the routes we now have available by running `rails c`
+Let's see all of the routes we now have available by running `rails routes`
 
 **COMMIT**
 
@@ -245,7 +245,7 @@ web: rails s
 
 ## Front End: React
 
-Now we have a working API. Let hone in on building our React UI. 
+Now we have a working API. Let's start building our React UI!
 
 ### You Do
 Look at these 3 wireframes for the Tunr UI and determine what types of React components we will need for this app.
