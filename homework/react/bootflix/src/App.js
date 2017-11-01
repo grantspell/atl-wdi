@@ -6,6 +6,7 @@ import Search from './components/Search';
 import Movie from './components/Movie';
 
 class App extends Component {
+<<<<<<< HEAD
     state = {
       titleSearchData: {
         type: String
@@ -46,9 +47,22 @@ class App extends Component {
           idSearchData: data
         });
       })
+=======
+  state = {
+    movie: example
   }
 
-  //Pass _searchByTitle, _searchById, and this.state.movie to it's appropriate child components.
+  //Update these methods to make axios calls to OMDB and update this.state.movie with the response from the server
+  searchByTitle = () => {
+    console.log("Search by Title");
+  }
+
+  searchById = () => {
+    console.log("Search by ID");
+>>>>>>> c569e4649a1376002a16d79743c367fd0e7e438f
+  }
+
+  //Pass searchByTitle, searchById, and this.state.movie to it's appropriate child components.
   render() {
     return (
       <div className="App">
